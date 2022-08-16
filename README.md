@@ -22,7 +22,7 @@ Initialize the model:
 classifier = EDT()
 ```
 
-Train the model on the training set, with the attrributes *X_train* and the labels *Y_train* defined on $2^M$, M the number of classes :
+Train the model on the training set, with the attrributes *X_train* and the labels *Y_train* defined on $2^M$, with *M* the number of classes :
 ```
 classifier.fit(X_train, y_train)
 ```
