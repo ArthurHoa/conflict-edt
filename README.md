@@ -22,12 +22,12 @@ Initialize the model:
 classifier = EDT()
 ```
 
-Train the model on the training set, with the attrributes *X_train* and the labels *Y_train* defined on $2^M$, with *M* the number of classes :
+Train the model on the training set, with the attrributes *X_train* and the labels *y_train* defined on $2^M$, with *M* the number of classes :
 ```
 classifier.fit(X_train, y_train)
 ```
 
-Use score to predict the classes of *X_test*, compare them to *Y_test* and return the accuracy of the model:
+Use score to predict the classes of *X_test*, compare them to *y_test* and return the accuracy of the model:
 ```
 precisions = classifier.score(X_test, y_test)
 ```
