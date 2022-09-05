@@ -163,6 +163,7 @@ class EDT(BaseEstimator, ClassifierMixin):
         self.size = self.X_trained.shape[0]
 
         # Construction of the tree
+        self.root_node = TreeNode()
         self._build_tree(np.array(range(self.size)), self.root_node)
 
         # The model is now fitted
