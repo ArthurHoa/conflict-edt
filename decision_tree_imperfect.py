@@ -123,10 +123,7 @@ class EDT(BaseEstimator, ClassifierMixin):
 
         # Check for data integrity
         if X.shape[0] != y.shape[0]:
-            if X.shape[0] * (self.nb_classes + 1) == y.shape[0]:
-                y = np.reshape(y, (-1, self.nb_classes + 1))
-            else:
-                raise ValueError("X and y must have the same number of rows")
+            raise ValueError("X and y must have the same number of rows")
 
         # Verify if the size of y is of a power set (and if it contains the empty set or not)
         if math.log(y.shape[1] + 1, 2).is_integer():
