@@ -79,7 +79,7 @@ An exmaple of the Evidential Random Forest prediction for the following picture 
   
 Prediction:  
 m({Basset}) = 0.71  
-m({Foxhound, Basset}) = 0.11  
+m({Foxhound, Basset}) = 0.12  
 m({Foxhound, Basset, Beagle, Brittany}) = 0.17  
   
 True class: Basset
