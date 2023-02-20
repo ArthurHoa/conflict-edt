@@ -31,3 +31,57 @@ Use score to predict the classes of *X_test*, compare them to *y_test* and retur
 ```
 precisions = classifier.score(X_test, y_test)
 ```
+
+## Example on Credal Dog-4
+
+### Credal Dog-4
+
+Link to the dataset : [Credal Dog-4](https://github.com/ArthurHoa/credal-datasets)
+
+Brittany | Beagle
+:--:|:--:
+<img src="https://github.com/ArthurHoa/credal-datasets/blob/master/ressources/pictures/Brittany.jpg?raw=true" width="70"> |  <img src="https://github.com/ArthurHoa/credal-datasets/blob/master/ressources/pictures/Beagle.jpg?raw=true" width="70">  
+
+Foxhound | Basset | Brittany | Beagle
+:--:|:--:|:--:|:--:
+<img src="https://github.com/ArthurHoa/credal-datasets/blob/master/ressources/pictures/Foxhound.jpg?raw=true" width="70"> | <img src="https://github.com/ArthurHoa/credal-datasets/blob/master/ressources/pictures/Basset.jpg?raw=true" width="70"> | <img src="https://github.com/ArthurHoa/credal-datasets/blob/master/ressources/pictures/Brittany.jpg?raw=true" width="70"> |  <img src="https://github.com/ArthurHoa/credal-datasets/blob/master/ressources/pictures/Beagle.jpg?raw=true" width="70">  
+
+### Code
+
+```
+from sklearn.model_selection import train_test_split
+from decision_tree_imperfect import EDT
+import numpy as np
+
+X = np.loadtxt('X.csv', delimiter=';')
+y = np.loadtxt('y.csv', delimiter=';')
+y_true = np.loadtxt('y_true.csv', delimiter=';')
+
+indexes = [i for i in range(X.shape[0])]
+train, test, _, _ = train_test_split(indexes, indexes, test_size=.2)
+
+classifier = EDT()
+
+classifier.fit(X[train], y[train])
+
+precision = classifier.score(X[test], y_true[test])
+
+print("Accuracy : ", precision)
+```
+
+Accuracy = 0.61
+
+### Output of the model
+
+An exmaple of the Evidential Random Forest prediction for the following picture is given as follows:
+
+<img src="https://www.dropbox.com/s/f67s7jwie1tnfs1/72.jpg?raw=true" width="150">  
+  
+# NULL 0 1 01 2 20 21 201 3 30 31 32 301 302 321 0123
+  
+Prediction:  
+m({Basset}) = 0.71  
+m({Foxhound, Basset}) = 0.11  
+m({Foxhound, Basset, Beagle, Brittany}) = 0.17  
+  
+True class: Basset
