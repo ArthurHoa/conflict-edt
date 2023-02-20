@@ -38,10 +38,6 @@ precisions = classifier.score(X_test, y_test)
 
 Link to the dataset : [Credal Dog-4](https://github.com/ArthurHoa/credal-datasets)
 
-Brittany | Beagle
-:--:|:--:
-<img src="https://github.com/ArthurHoa/credal-datasets/blob/master/ressources/pictures/Brittany.jpg?raw=true" width="70"> |  <img src="https://github.com/ArthurHoa/credal-datasets/blob/master/ressources/pictures/Beagle.jpg?raw=true" width="70">  
-
 Foxhound | Basset | Brittany | Beagle
 :--:|:--:|:--:|:--:
 <img src="https://github.com/ArthurHoa/credal-datasets/blob/master/ressources/pictures/Foxhound.jpg?raw=true" width="70"> | <img src="https://github.com/ArthurHoa/credal-datasets/blob/master/ressources/pictures/Basset.jpg?raw=true" width="70"> | <img src="https://github.com/ArthurHoa/credal-datasets/blob/master/ressources/pictures/Brittany.jpg?raw=true" width="70"> |  <img src="https://github.com/ArthurHoa/credal-datasets/blob/master/ressources/pictures/Beagle.jpg?raw=true" width="70">  
