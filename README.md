@@ -69,7 +69,7 @@ Accuracy = 0.61
 
 ### Output of the model
 
-An exmaple of the Evidential Random Forest prediction for the following picture is given as follows:
+An exmaple of the Evidential Decision Tree prediction for the following picture is given as follows:
 
 <img src="https://www.dropbox.com/s/f67s7jwie1tnfs1/72.jpg?raw=true" width="150">  
   
