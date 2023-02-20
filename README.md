@@ -77,8 +77,6 @@ An exmaple of the Evidential Random Forest prediction for the following picture 
 
 <img src="https://www.dropbox.com/s/f67s7jwie1tnfs1/72.jpg?raw=true" width="150">  
   
-# NULL 0 1 01 2 20 21 201 3 30 31 32 301 302 321 0123
-  
 Prediction:  
 m({Basset}) = 0.71  
 m({Foxhound, Basset}) = 0.11  
